@@ -1,0 +1,13 @@
+{
+    "ferramentas_menu": "Bagulhos",
+    "get_images_menu": "Roube imagens na cara dura",
+    "apis_menu": "APIs",
+    "login_menu": "Entrar",
+    "cadastro_menu": "Cadastrar-se",
+    "faq_menu": "#InutilidadesResponde",
+    "donate_menu": "Doar pra comprar alimento",
+    "widget_log": "Atualizações Inúteis",
+    "widget_definicao_apis": "Que merda de APIs são essas?",
+
+    "widget_text_def_apis": "Nossas APIs, meu amigo, são ferramentas para facilitar o trabalho de nerds (provavelmente como você). Tipo, você quer pegar o link de todas as imagens de uma página da web qualquer, mas não quer escrever linhas e linhas de códigos pra isso, aí você pega tudo aqui. Você deve estar pensando: <i>“Quem diabos vai usar isso?”</i> e não vou nem tentar te explicar o que essa API INÚTIL faz nesse site que se chama INUTILIDADES...<br><br>Repare: não estou dizendo que APIs são apenas pra facilitar trabalho de nerds beleza? Só as do nosso site, morô cuzão?"
+}

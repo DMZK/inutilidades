@@ -1,0 +1,13 @@
+{
+    "ferramentas_menu": "Ferramentas",
+    "get_images_menu": "Pegue todas as imagens de um site",
+    "apis_menu": "APIs",
+    "login_menu": "Login",
+    "cadastro_menu": "Cadastrar-se",
+    "faq_menu": "FAQ",
+    "donate_menu": "Faça uma doação",
+    "widget_log": "Atualizações",
+    "widget_definicao_apis": "O que são APIs?",
+
+    "widget_text_def_apis": "APIs em nosso site são facilitadores de programação usados geralmente por quem está começando a desenvolver softwares mas que precisam de algo para facilitar o trabalho (como pegar o endereço URL de todas as imagens de uma página). Sim, isso é inútil, mas... né!<br><br>Calma! Não saia do site ainda, tem algumas coisas que talvez podem ser úteis para você, veja o menu <i>Ferramentas</i>."
+}
