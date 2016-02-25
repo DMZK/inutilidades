@@ -21,6 +21,8 @@ $lang = json_decode($lang_file);
 	<link rel="stylesheet" type="text/css" href="css/css.inutil.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<meta name="google-site-verification" content="Dh0lOKlyoCfuVM3C54WRWDKkIWl-XoQJvNl8W8w7CVY" />
 
 	<meta name="theme-color" content="#f1c40f">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
