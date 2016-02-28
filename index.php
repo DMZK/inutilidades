@@ -21,7 +21,7 @@ $lang = json_decode($lang_file);
 	<link rel="stylesheet" type="text/css" href="css/css.inutil.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+	<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 	<meta name="google-signin-client_id" content="116454895004-e255eu26vcosjdfk5vqm8a6vtbcgr56p.apps.googleusercontent.com">
 	
 	<meta name="google-site-verification" content="Dh0lOKlyoCfuVM3C54WRWDKkIWl-XoQJvNl8W8w7CVY" />
@@ -41,7 +41,8 @@ $lang = json_decode($lang_file);
 </head>
 <body>
 <script>
-gapi.signin.render("g_signin", { 
+function renderButton() {
+gapi.signin2.render("g_signin", { 
   'callback': signinCallback, 
   'clientid': '116454895004-e255eu26vcosjdfk5vqm8a6vtbcgr56p.apps.googleusercontent.com', 
   'cookiepolicy': 'https://www.inutilidades.cf/politica_de_cookies', 
@@ -100,7 +101,7 @@ gapi.signin.render("g_signin", {
 			<form>
 				<div class="social_login_btns">
 					<a href="#" class="facebook_login_btn desativado"><i class="fa fa-facebook-official"></i> Entrar com Facebook</a>
-					<a href="apis/auth.php?g_inutil_login&g_signin" class="google_login_btn" id="g_signin"><i class="fa fa-google-plus-square"></i> Entrar com Google+</a>
+					<a class="google_login_btn" id="g_signin"><i class="fa fa-google-plus-square"></i> Entrar com Google+</a>
 					<a href="#" class="twitter_login_btn desativado"><i class="fa fa-twitter-square"></i> Entrar com Twitter</a>
 				</div>
 
