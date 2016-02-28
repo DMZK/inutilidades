@@ -43,7 +43,7 @@ $lang = json_decode($lang_file);
 <script>
 function renderButton() {
 gapi.signin2.render("g_signin", { 
-  'callback': signinCallback, 
+  'callback': "https://www.inutilidades.cf/", 
   'clientid': '116454895004-e255eu26vcosjdfk5vqm8a6vtbcgr56p.apps.googleusercontent.com', 
   'cookiepolicy': 'https://www.inutilidades.cf/politica_de_cookies', 
   'requestvisibleactions': 'http://schemas.google.com/AddActivity',
