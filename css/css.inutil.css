@@ -226,7 +226,9 @@ header{
 	text-decoration:none;
 	font-size:18px;
 }
-
+.desativado{
+	background:#95a5a6;
+}
 .login_form input[type="text"],
 .login_form input[type="password"]{
 	box-sizing:border-box;
