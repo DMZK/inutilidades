@@ -9,9 +9,9 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="116454895004-e255eu26vcosjdfk5vqm8a6vtbcgr56p.apps.googleusercontent.com">
 </head>
-<?php if(isset($_GET['g_signin']): ?>
+<?php if(isset($_GET['g_signin'])): ?>
 <body onload="signIn()">
-<?php elseif(isset($_GET['g_signout']): ?>
+<?php elseif(isset($_GET['g_signout'])): ?>
 <body onload="signOut()">
 <?php endif; ?>
 	<script>
