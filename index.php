@@ -21,7 +21,7 @@ $lang = json_decode($lang_file);
 	<link rel="stylesheet" type="text/css" href="css/css.inutil.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
 	<meta name="google-signin-client_id" content="116454895004-e255eu26vcosjdfk5vqm8a6vtbcgr56p.apps.googleusercontent.com">
 	
 	<meta name="google-site-verification" content="Dh0lOKlyoCfuVM3C54WRWDKkIWl-XoQJvNl8W8w7CVY" />
@@ -38,65 +38,14 @@ $lang = json_decode($lang_file);
 	<meta property="og:site_name" content="Inutilidades" />
 
 	<link rel="shortcut icon" type="image/png" href="img/logo.png"/>
-
-	<script type="text/javascript">
-		function callBackMudancasStatus(response){
-
-			if(response.status === "connected"){
-
-				$("#logar").hide();
-				testAPI();
-			}else if(response.status === "not_authorized"){
-				alert("Nao ta logado no app");
-			}else{
-				alert("nao logado em nada");
-			}
-
-		}
-	</script>
 </head>
 <body>
 <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '989895847742738',
-      xfbml      : true,
-      cookie 	 : true,
-      version    : 'v2.5'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-
-  FB.getLoginStatus(function(response){
-  	callBackMudancasStatus(response);
-  });
-
-  function testAPI(){
-  	FB.api("/me", function(response){
-  		alert(response.name);
-  		console.log(response);
-  	});
-  }
-
-  function logout(){
-  	FB.logout(function(response){
-  		callBackMudancasStatus(response);
-  		alert("deslogado");
-  	});
-  }
-
-  function login(){
-  	FB.login(function(response){
-  		callBackMudancasStatus(response);
-  	});
-  }
+	function onLoad() {
+      gapi.signin2.render('custom_g_btn', {
+        'onsuccess': onCustomSuccess
+      });
+    }
 </script>
 
 <header>
@@ -149,6 +98,7 @@ $lang = json_decode($lang_file);
 			<form>
 				<div class="social_login_btns">
 					<a href="#" class="facebook_login_btn desativado"><i class="fa fa-facebook-official"></i> Entrar com Facebook</a>
+					<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 					<a href="apis/auth.php?g_inutil_login&g_signin" class="google_login_btn"><i class="fa fa-google-plus-square"></i> Entrar com Google+</a>
 					<a href="#" class="twitter_login_btn desativado"><i class="fa fa-twitter-square"></i> Entrar com Twitter</a>
 				</div>
@@ -224,6 +174,21 @@ $lang = json_decode($lang_file);
 	$("#pedido_api_open").click(function(){
 		$("#pedido_api").slideToggle();
 	});
+	
+	function onSignIn(googleUser) {
+		var profile = googleUser.getBasicProfile();
+		console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+		console.log("Name: " + profile.getName());
+		console.log("Image URL: " + profile.getImageUrl());
+		console.log("Email: " + profile.getEmail());
+						
+		// The ID token you need to pass to your backend:
+		var id_token = googleUser.getAuthResponse().id_token;
+		 console.log("ID Token: " + id_token);
+		$.get( "apis/response.php?gdata", { email: profile.getEmail(), token: id_token, img: profile.getImageUrl() } ).done(function( data ) {
+			alert( "Dados: " + data );
+		});
+	};
 </script>
 
 </body>
