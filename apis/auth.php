@@ -14,9 +14,10 @@
 <?php elseif(isset($_GET['g_signout'])): ?>
 <body onload="signOut()">
 <?php endif; ?>
+<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 	<script>
 	
-	<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+	
 	function onSignIn(googleUser) {
 		
 		
