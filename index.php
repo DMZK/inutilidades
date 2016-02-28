@@ -21,8 +21,23 @@ $lang = json_decode($lang_file);
 	<link rel="stylesheet" type="text/css" href="css/css.inutil.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-	<meta name="google-signin-client_id" content="116454895004-e255eu26vcosjdfk5vqm8a6vtbcgr56p.apps.googleusercontent.com">
+	
+	<script src="https://apis.google.com/js/api:client.js"></script>
+	  <script>
+	  var googleUser = {};
+	  var startApp = function() {
+	    gapi.load('auth2', function(){
+	      // Retrieve the singleton for the GoogleAuth library and set up the client.
+	      auth2 = gapi.auth2.init({
+	        client_id: '116454895004-e255eu26vcosjdfk5vqm8a6vtbcgr56p.apps.googleusercontent.com',
+	        cookiepolicy: 'https://www.inutilidades.cf/politica_de_cookies',
+	        // Request scopes in addition to 'profile' and 'email'
+	        //scope: 'additional_scope'
+	      });
+	      attachSignin(document.getElementById('g_signin'));
+	    });
+	  };
+	  </script>
 	
 	<meta name="google-site-verification" content="Dh0lOKlyoCfuVM3C54WRWDKkIWl-XoQJvNl8W8w7CVY" />
 
@@ -40,17 +55,6 @@ $lang = json_decode($lang_file);
 	<link rel="shortcut icon" type="image/png" href="img/logo.png"/>
 </head>
 <body>
-<script>
-function renderButton() {
-gapi.signin2.render("g_signin", { 
-  'callback': "https://www.inutilidades.cf/", 
-  'clientid': '116454895004-e255eu26vcosjdfk5vqm8a6vtbcgr56p.apps.googleusercontent.com', 
-  'cookiepolicy': 'https://www.inutilidades.cf/politica_de_cookies', 
-  'requestvisibleactions': 'http://schemas.google.com/AddActivity',
-  'scope': 'https://www.googleapis.com/auth/plus.login'
-});
-}
-</script>
 
 <header>
 	<div class="inner_header">
