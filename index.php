@@ -31,14 +31,17 @@ $lang = json_decode($lang_file);
 				client_id: '116454895004-e255eu26vcosjdfk5vqm8a6vtbcgr56p.apps.googleusercontent.com',
 				cookiepolicy: 'https://www.inutilidades.cf/politica_de_cookies'
 			});
-		attachSignin(document.getElementById('g_signin'));
-	});
+			attachSignin(document.getElementById('g_signin'));
+		});
+	};
 	    
 	function attachSignin(element) {
 		auth2.attachClickHandler(element, {}, function(googleUser) {
 			alert(googleUser.getBasicProfile().getName());
+		}, function(error) {
+	          alert(JSON.stringify(error, undefined, 2));
 		});
-	}
+	};
 	</script>
 	
 	<meta name="google-site-verification" content="Dh0lOKlyoCfuVM3C54WRWDKkIWl-XoQJvNl8W8w7CVY" />
