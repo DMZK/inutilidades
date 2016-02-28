@@ -22,7 +22,7 @@ $lang = json_decode($lang_file);
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
-	<meta name="google-signin-client_id" content="812dfcd7d589f5beb33ac69d0f235ec62e276ee5.apps.googleusercontent.com">
+	<meta name="google-signin-client_id" content="116454895004-e255eu26vcosjdfk5vqm8a6vtbcgr56p.apps.googleusercontent.com">
 	
 	<meta name="google-site-verification" content="Dh0lOKlyoCfuVM3C54WRWDKkIWl-XoQJvNl8W8w7CVY" />
 
