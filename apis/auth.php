@@ -27,8 +27,8 @@
 		// The ID token you need to pass to your backend:
 		var id_token = googleUser.getAuthResponse().id_token;
 		 console.log("ID Token: " + id_token);
-		$.get( "auth.php?get_g_data", { email: profile.getEmail(), token: id_token, img: profile.getImageUrl() } ).done(function( data ) {
-			alert( "Data Loaded: " + data );
+		$.get( "response.php?gdata", { email: profile.getEmail(), token: id_token, img: profile.getImageUrl() } ).done(function( data ) {
+			alert( "Dados: " + data );
 		});
 	};
 	</script>
