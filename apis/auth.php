@@ -10,11 +10,11 @@
     <meta name="google-signin-client_id" content="116454895004-e255eu26vcosjdfk5vqm8a6vtbcgr56p.apps.googleusercontent.com">
 </head>
 <?php if(isset($_GET['g_signin'])): ?>
-<body onload="signIn()">
+<body onload="onSignIn()" data-onsuccess="onSignIn">
 <?php elseif(isset($_GET['g_signout'])): ?>
 <body onload="signOut()">
 <?php endif; ?>
-<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+<div class="g-signin2"  data-theme="dark"></div>
 	<script>
 	
 	
