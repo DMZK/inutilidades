@@ -41,11 +41,13 @@ $lang = json_decode($lang_file);
 </head>
 <body>
 <script>
-	function onLoad() {
-      gapi.signin2.render('custom_g_btn', {
-        'onsuccess': onCustomSuccess
-      });
-    }
+gapi.signin.render("g_signin", { 
+  'callback': signinCallback, 
+  'clientid': '116454895004-e255eu26vcosjdfk5vqm8a6vtbcgr56p.apps.googleusercontent.com', 
+  'cookiepolicy': 'https://www.inutilidades.cf/politica_de_cookies', 
+  'requestvisibleactions': 'http://schemas.google.com/AddActivity',
+  'scope': 'https://www.googleapis.com/auth/plus.login'
+});
 </script>
 
 <header>
