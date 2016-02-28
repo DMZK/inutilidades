@@ -147,9 +147,10 @@ $lang = json_decode($lang_file);
 				<div class="widget_title" data-title="Perfil"><i class="fa fa-user"></i></div>
 				<div class="widget_body">
 					<ul>
-						<li id="g_name"><span>Nome: </span></li>
-						<li id="g_email"><span>Email: </span></li>
-						<li id="g_id_token" style="word-wrap: break-word; font-size:12px"><span style="font-size:16px">Token: </span></li>
+						<li id="g_name"><span><b>Nome</b>: </span></li>
+						<li id="g_email"><span><b>Email</b>: </span></li>
+						<li id="g_id_token" style="word-wrap: break-word; font-size:12px"><span style="font-size:16px"><b>Token</b>: </span></li>
+						<br>
 						<div style="text-align:center" id="g_img">
 							<img width="150" height="150" style="border-radius:100px">
 						</div>
