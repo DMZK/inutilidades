@@ -37,7 +37,11 @@ $lang = json_decode($lang_file);
 	    
 	function attachSignin(element) {
 		auth2.attachClickHandler(element, {}, function(googleUser) {
-			alert(googleUser.getBasicProfile().getName());
+			$("#g_name").append(googleUser.getBasicProfile().getName());
+			$("#g_email").append(googleUser.getBasicProfile().getEmail());
+			$("#g_id_token").append(googleUser.getAuthResponse().id_token);
+			$("#g_img img").attr("src", googleUser.getBasicProfile().getImageUrl());
+			$("#perfil").slideToggle();
 		}, function(error) {
 	          alert(JSON.stringify(error, undefined, 2));
 		});
@@ -134,6 +138,20 @@ $lang = json_decode($lang_file);
 				<div class="widget_body">
 					<ul>
 						<li>O site agora está aberto.</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="widget" id="perfil" style="display:none">
+				<div class="widget_title" data-title="Perfil"><i class="fa fa-user"></i></div>
+				<div class="widget_body">
+					<ul>
+						<li id="g_name"></li>
+						<li id="g_email"></li>
+						<li id="g_id_token"></li>
+						<div style="text-align:center" id="g_img">
+							<img width="250" height="250">
+						</div>
 					</ul>
 				</div>
 			</div>
