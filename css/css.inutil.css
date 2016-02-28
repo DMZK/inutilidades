@@ -9,6 +9,8 @@
 	transition-duration:0.3s;
 }
 
+a{ cursor:pointer; }
+
 .mobile{
 	display:none;
 }
