@@ -23,28 +23,24 @@ $lang = json_decode($lang_file);
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	
 	<script src="https://apis.google.com/js/api:client.js"></script>
-	  <script>
-	  var googleUser = {};
-	  var startGApp = function() {
-	    gapi.load('auth2', function(){
-	      // Retrieve the singleton for the GoogleAuth library and set up the client.
-	      auth2 = gapi.auth2.init({
-	        client_id: '116454895004-e255eu26vcosjdfk5vqm8a6vtbcgr56p.apps.googleusercontent.com',
-	        cookiepolicy: 'https://www.inutilidades.cf/politica_de_cookies',
-	        // Request scopes in addition to 'profile' and 'email'
-	        //scope: 'additional_scope'
-	      });
-	      attachSignin(document.getElementById('g_signin'));
-	    });
+	<script>
+	var googleUser = {};
+	var startGApp = function() {
+	gapi.load('auth2', function(){
+		auth2 = gapi.auth2.init({
+			client_id: '116454895004-e255eu26vcosjdfk5vqm8a6vtbcgr56p.apps.googleusercontent.com',
+			cookiepolicy: 'https://www.inutilidades.cf/politica_de_cookies'
+		});
+		attachSignin(document.getElementById('g_signin'));
+	});
 	    
-	    function attachSignin(element) {
-		    console.log(element.id);
-		    auth2.attachClickHandler(element, {},
-		        function(googleUser) {
-		        	alert(googleUser.getBasicProfile().getName());
-		        }
-		  }
-	  };
+	function attachSignin(element) {
+		console.log(element.id);
+		auth2.attachClickHandler(element, {},
+			function(googleUser) {
+			alert(googleUser.getBasicProfile().getName());
+		});
+	};
 	  </script>
 	
 	<meta name="google-site-verification" content="Dh0lOKlyoCfuVM3C54WRWDKkIWl-XoQJvNl8W8w7CVY" />
