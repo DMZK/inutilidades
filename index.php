@@ -21,6 +21,8 @@ $lang = json_decode($lang_file);
 	<link rel="stylesheet" type="text/css" href="css/css.inutil.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<meta name="google-signin-client_id" content="812dfcd7d589f5beb33ac69d0f235ec62e276ee5.apps.googleusercontent.com">
 	
 	<meta name="google-site-verification" content="Dh0lOKlyoCfuVM3C54WRWDKkIWl-XoQJvNl8W8w7CVY" />
 
@@ -170,6 +172,31 @@ $lang = json_decode($lang_file);
 				<div class="widget_body">
 					<ul>
 						<li>O site agora está aberto.</li>
+						<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+						    <script>
+						      function onSignIn(googleUser) {
+						        // Useful data for your client-side scripts:
+						        var profile = googleUser.getBasicProfile();
+						        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+						        console.log("Name: " + profile.getName());
+						        console.log("Image URL: " + profile.getImageUrl());
+						        console.log("Email: " + profile.getEmail());
+						
+						        // The ID token you need to pass to your backend:
+						        var id_token = googleUser.getAuthResponse().id_token;
+						        console.log("ID Token: " + id_token);
+						      };
+						    </script>
+						
+						<a href="#" onclick="signOut();">Sign out</a>
+						<script>
+						  function signOut() {
+						    var auth2 = gapi.auth2.getAuthInstance();
+						    auth2.signOut().then(function () {
+						      console.log('User signed out.');
+						    });
+						  }
+						</script>
 					</ul>
 				</div>
 			</div>
