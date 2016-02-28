@@ -146,9 +146,9 @@ $lang = json_decode($lang_file);
 			<a id="fechar_btn"><i class="fa fa-times"></i></a>
 			<form>
 				<div class="social_login_btns">
-					<a href="#" class="facebook_login_btn"><i class="fa fa-facebook-official"></i> Entrar com Facebook</a>
+					<a href="#" class="facebook_login_btn desativado"><i class="fa fa-facebook-official"></i> Entrar com Facebook</a>
 					<a href="#" class="google_login_btn"><i class="fa fa-google-plus-square"></i> Entrar com Google+</a>
-					<a href="#" class="twitter_login_btn"><i class="fa fa-twitter-square"></i> Entrar com Twitter</a>
+					<a href="#" class="twitter_login_btn desativado"><i class="fa fa-twitter-square"></i> Entrar com Twitter</a>
 				</div>
 
 				<label>Ou use sua conta Inútil:</label>
