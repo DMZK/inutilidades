@@ -36,6 +36,14 @@ $lang = json_decode($lang_file);
 	      });
 	      attachSignin(document.getElementById('g_signin'));
 	    });
+	    
+	    function attachSignin(element) {
+		    console.log(element.id);
+		    auth2.attachClickHandler(element, {},
+		        function(googleUser) {
+		        	alert(googleUser.getBasicProfile().getName());
+		        }
+		  }
 	  };
 	  </script>
 	
