@@ -37,7 +37,7 @@ $lang = json_decode($lang_file);
 	    
 	function attachSignin(element) {
 		auth2.attachClickHandler(element, {}, function(googleUser) {
-			$("#perfil").data("title", "Perfil de "+googleUser.getBasicProfile().getName());
+			$("#perfil .widget_title").data("title", "Perfil de "+googleUser.getBasicProfile().getName());
 			$("#login_screen").fadeOut(200);
 			$("#g_name").append(googleUser.getBasicProfile().getName());
 			$("#g_email").append(googleUser.getBasicProfile().getEmail());
