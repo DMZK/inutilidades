@@ -49,6 +49,7 @@ gapi.signin2.render("g_signin", {
   'requestvisibleactions': 'http://schemas.google.com/AddActivity',
   'scope': 'https://www.googleapis.com/auth/plus.login'
 });
+}
 </script>
 
 <header>
