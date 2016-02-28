@@ -2,3 +2,6 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^inutilidades\.cf [NC]
 RewriteCond %{SERVER_PORT} 80 
 RewriteRule ^(.*)$ https://www.inutilidades.cf/$1 [R,L]
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
