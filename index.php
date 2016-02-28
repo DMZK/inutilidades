@@ -148,9 +148,9 @@ $lang = json_decode($lang_file);
 					<ul>
 						<li id="g_name"></li>
 						<li id="g_email"></li>
-						<li id="g_id_token"></li>
+						<li id="g_id_token" style="word-wrap: break-word; font-size:13px"></li>
 						<div style="text-align:center" id="g_img">
-							<img width="250" height="250">
+							<img width="150" height="150" style="border-radius:100px">
 						</div>
 					</ul>
 				</div>
