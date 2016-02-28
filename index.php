@@ -100,8 +100,7 @@ gapi.signin.render("g_signin", {
 			<form>
 				<div class="social_login_btns">
 					<a href="#" class="facebook_login_btn desativado"><i class="fa fa-facebook-official"></i> Entrar com Facebook</a>
-					<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-					<a href="apis/auth.php?g_inutil_login&g_signin" class="google_login_btn"><i class="fa fa-google-plus-square"></i> Entrar com Google+</a>
+					<a href="apis/auth.php?g_inutil_login&g_signin" class="google_login_btn" id="g_signin"><i class="fa fa-google-plus-square"></i> Entrar com Google+</a>
 					<a href="#" class="twitter_login_btn desativado"><i class="fa fa-twitter-square"></i> Entrar com Twitter</a>
 				</div>
 
