@@ -1,5 +1,3 @@
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^inutilidades\.cf
 RewriteRule ^(.*)$ https://www.inutilidades.cf/$1 [R,L]
-RewriteCond %{ENV:HTTPS} !on [NC]
-RewriteRule ^(.*)$ https://www.inutilidades.cf/$1 [R,L]
