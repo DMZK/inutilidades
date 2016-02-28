@@ -15,7 +15,9 @@
 <body onload="signOut()">
 <?php endif; ?>
 	<script>
-	function signIn(googleUser) {
+	
+	<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+	function onSignIn(googleUser) {
 		
 		
 		var profile = googleUser.getBasicProfile();
