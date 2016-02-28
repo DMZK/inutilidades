@@ -1,4 +1,4 @@
-<?php if(isset($_GET['g_inutil_login']): ?>
+<?php if(isset($_GET['g_inutil_login'])): ?>
 <DOCTYPE html>
 <html>
 <head>
