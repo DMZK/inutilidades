@@ -25,7 +25,7 @@ $lang = json_decode($lang_file);
 	<script src="https://apis.google.com/js/api:client.js"></script>
 	  <script>
 	  var googleUser = {};
-	  var startApp = function() {
+	  var startGApp = function() {
 	    gapi.load('auth2', function(){
 	      // Retrieve the singleton for the GoogleAuth library and set up the client.
 	      auth2 = gapi.auth2.init({
@@ -182,20 +182,7 @@ $lang = json_decode($lang_file);
 		$("#pedido_api").slideToggle();
 	});
 	
-	function onSignIn(googleUser) {
-		var profile = googleUser.getBasicProfile();
-		console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-		console.log("Name: " + profile.getName());
-		console.log("Image URL: " + profile.getImageUrl());
-		console.log("Email: " + profile.getEmail());
-						
-		// The ID token you need to pass to your backend:
-		var id_token = googleUser.getAuthResponse().id_token;
-		 console.log("ID Token: " + id_token);
-		$.get( "apis/response.php?gdata", { email: profile.getEmail(), token: id_token, img: profile.getImageUrl() } ).done(function( data ) {
-			alert( "Dados: " + data );
-		});
-	};
+	startGApp();
 </script>
 
 </body>
