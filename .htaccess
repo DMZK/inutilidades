@@ -1,4 +1,5 @@
-RewriteEngine On 
+RewriteEngine On
+RewriteCond %{HTTPS} off
 RewriteCond %{HTTP_HOST} ^inutilidades\.cf [OR]
 RewriteCond %{HTTP_HOST} ^www\.inutilidades\.cf
 RewriteCond %{SERVER_PORT} 80
